@@ -1,0 +1,25 @@
+// Variable overrides
+:root {
+  --primary: #00ADEF;
+  --secondary: #000;
+  --jobportal-primary:#f89719;
+  --success: #36D5BE;
+  --info: #63c2de;
+  --warning: #FFD200;
+  --warning-light: #FFF4BF;
+  --danger: #E32B54;
+  --danger-light: #F8CAD4;
+  --dark: #404040;
+  --dark-gray: #808080;
+  --light-gray:#f5f6fa;
+  --light: #f1f2f5;
+  --border:#dcdcdc;
+  --white : #fff;
+  --font-family-sans-serif: "Open Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}

@@ -1,0 +1,11 @@
+
+/* Mediaquery */
+@media screen and (min-width:0){
+  .col-sm-none{display: none;}
+}
+@media screen and (min-width: 768px){
+  .col-sm-none{display:block;}
+}
+@media screen and (min-width: 992px){
+  .navbar .navbar-brand{width:200px;}
+}
