@@ -1,7 +1,7 @@
 # task-straker
 UI Exercise for Admin panel
 
-<!-- ## 🏠 [Homepage](www..) -->
+## 🏠 [Mock up page]([www..](https://yubinchung.github.io/task-straker/))
 
 ## Install
 
