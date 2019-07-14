@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   // load select2
   $('.select2_custom').select2({
