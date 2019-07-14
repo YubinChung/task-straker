@@ -2,8 +2,13 @@
   "name": "task-straker",
   "version": "0.1.0",
   "description": "UI Exercise for Designer/UI Front End Developer",
-  "homepage": "https://YubinChung.github.io/task-straker",
+  "author": "Yu Bin Chung",
   "license": "MIT",
+  "homepage": "https://YubinChung.github.io/task-straker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YubinChung/task-straker.git"
+  },
   "main": "src/index.html",
   "scripts": {
     "build": "npm-run-all build-clean build-copy build-vendors",
@@ -33,7 +38,6 @@
     "bootstrap": "^4.3.1",
     "core-js": "^3.1.4",
     "jquery": "^3.4.1",
-    "pace-progress": "1.0.2",
     "perfect-scrollbar": "^1.4.0",
     "popper.js": "^1.15.0",
     "regenerator-runtime": "^0.13.2",
