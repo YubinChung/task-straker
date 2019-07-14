@@ -17072,10 +17072,10 @@ table tbody td.text-left {
     height: 25px;
     margin-right: 10px;
   }
-  .card.job_list .list-title .item_info_wrap {
+  .card.job_list .list-title .item_info_wrap.col {
     line-height: 18px !important;
   }
-  .card.job_list .list-title .item_info_wrap span {
+  .card.job_list .list-title .item_info_wrap.col span {
     padding-left: 10px;
     font-size: 11px;
     line-height: 18px !important;
