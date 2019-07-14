@@ -48,7 +48,8 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false">
-            John Doe <i class="material-icons">expand_more</i>
+            <span class="user_name">John Doe</span> 
+            <i class="material-icons drop_open">expand_more</i><i class="material-icons drop_close">expand_less</i>
             <img class="img-avatar" src="img/avatars/no_avatar.png" alt="Profile Image" />
           </a>
           <div class="dropdown-menu dropdown-menu-right">
@@ -59,10 +60,6 @@
           </div>
         </li>
       </ul>
-      <!-- Mobile menu button -->
-      <button class="navbar-toggler aside-menu-toggler d-lg-none" type="button" data-toggle="aside-menu-show">
-        <span class="navbar-toggler-icon"></span>
-      </button>
     </header>
     <div class="app-body">
       <div class="sidebar">
@@ -73,8 +70,8 @@
                 <i class="material-icons">dashboard</i> Dashboard
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">
+            <li class="nav-item open" >
+              <a class="nav-link active" href="javascript:void(0);">
                 <i class="material-icons">assignment_ind</i>Jobs</a>
             </li>
             <li class="nav-item">
@@ -107,33 +104,33 @@
             <div class="card job_search">
               <div class="card-body">
                 <div class="row">
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-xl-6">
                     <div class="row">
                       <div class="col-sm-4 col-md-4 pr-0">
                         <label for="job_pm">Project Manager</label>
                         <div class="form-group mb-0">
-                          <select class="js-example-basic-multiple withPhoto" id="job_pm" name="job_pm[]" multiple="multiple">
+                          <select class="select2_custom withPhoto" id="job_pm" name="job_pm[]" multiple="multiple">
                             <option value="John Doe" data-id="4">John Doe</option>
-                            <option value="Project Manager 1" data-id="1">Project Manager 1</option>
-                            <option value="Project Manager 2" data-id="2">Project Manager 2</option>
-                            <option value="Project Manager 3" data-id="3">Project Manager 3</option>
+                            <option value="PM 1" data-id="1">PM 1</option>
+                            <option value="PM 2" data-id="2">PM 2</option>
+                            <option value="PM 3" data-id="3">PM 3</option>
                           </select>
                         </div>
                       </div>
                       <div class="col-sm-4 col-md-4 pr-0">
                         <label for="job_am">Account Manager</label>
                         <div class="form-group mb-0">
-                          <select class="js-example-basic-multiple withPhoto" id="job_am" name="job_am[]" multiple="multiple">
+                          <select class="select2_custom withPhoto" id="job_am" name="job_am[]" multiple="multiple">
                             <option value="Account 1" data-id="1">Account 1</option>
                             <option value="Account 2" data-id="2">Account 2</option>
                             <option value="Account 3" data-id="3">Account 3</option>
                           </select>
                         </div>
                       </div>
-                      <div class="col-sm-4 col-md-4 pr-0">
+                      <div class="col-sm-4 col-md-4 pr-0 search_status">
                         <label for="job_status">Status</label>
                         <div class="form-group mb-0">
-                          <select class="js-example-basic-multiple" id="job_status" name="job_status[]" multiple="multiple">
+                          <select class="select2_custom" id="job_status" name="job_status[]" multiple="multiple">
                             <option value="all">All</option>
                             <option value="In Progress">In Progress</option>
                             <option value="Pending">Pending</option>
@@ -143,7 +140,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-xl-6">
                     <div class="row">
                       <div class="col-sm-9 col-md-9 pr-0">
                         <label for="job_search_cat">More</label>
@@ -159,11 +156,11 @@
                             <span class="input-group-append">
                               <button class="btn" type="button"><i class="material-icons">search</i></button>
                             </span>
-                            <input class="form-control" id="job_search" name="job_search" size="16" type="text" placeholder="Search...">
+                            <input class="form-control" id="job_search" name="job_search" size="16" type="text">
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm-3 col-md-3">
+                      <div class="col-sm-3 col-md-3 sorting_wrap">
                         <label for="job_sorting">Sort by</label>
                         <div class="form-group mb-0">
                           <select class="form-control" name="job_sorting" id="job_sorting">
@@ -190,22 +187,28 @@
                 <div id="list-001" data-children=".item">
                   <div class="item">
                     <div class="row list-title" data-toggle="collapse" data-parent="#list-001" href="#list-001-contents" aria-expanded="true" aria-controls="list-001-contents">
-                      <div class="col col-sm-6 col-md-3 item_meta_wrap">
+                      <div class="col col-sm-6 col-md-6 col-lg-3 item_meta_wrap">
                         <img class="img-avatar" src="img/avatars/no_avatar.png" alt="Profile Image" />
                         <h4 class="card-title mb-0">TJ123456</h4>
                       </div>
-                      <div class="col col-sm-none col-md-6 item_info_wrap">
+                      <div class="col col-sm-12 col-md-12 col-lg-6 item_info_wrap">
                         <span>Ray Sumner</span>
                         <span>Translation + Edit</span>
                         <span>Spanish (Spain)</span>
                       </div>
-                      <div class="col col-sm-6 col-md-3 item_status_wrap">
+                      <div class="col col-sm-6 col-md-6 col-lg-3 pl-0 item_status_wrap">
                         <span class="badge float-right badge-pill badge-primary">In Progress</span>
                         <h4 class="time float-right mb-0">1d 5h</h4>
                       </div>
                     </div>
                     <div class="collapse show" id="list-001-contents" role="tabpanel">
-                      <table class="table table-responsive-sm">
+                      <div class="msg_tbl_horizon">
+                        <span>
+                          This table is horizontally scrollable
+                          <i class="material-icons">swap_horizontal_circle</i>
+                        </span>
+                      </div>
+                      <table class="table table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
                         <thead>
                           <tr>
                             <th class="th_batchname">Batch Name</th>
@@ -342,22 +345,28 @@
                 <div id="list-002" data-children=".item">
                   <div class="item">
                     <div class="row list-title" data-toggle="collapse" data-parent="#list-002" href="#list-002-contents" aria-expanded="true" aria-controls="list-002-contents">
-                      <div class="col col-sm-6 col-md-3 item_meta_wrap">
+                      <div class="col col-sm-6 col-md-6 col-lg-3 item_meta_wrap">
                         <img class="img-avatar" src="img/avatars/no_avatar.png" alt="Profile Image" />
                         <h4 class="card-title mb-0">TJ123456</h4>
                       </div>
-                      <div class="col col-sm-none col-md-6 item_info_wrap">
+                      <div class="col col-md-12 col-lg-6 item_info_wrap">
                         <span>Ray Sumner</span>
                         <span>Translation + Edit</span>
                         <span>Spanish (Spain)</span>
                       </div>
-                      <div class="col col-sm-6 col-md-3 item_status_wrap">
+                      <div class="col col-sm-6 col-md-6 col-lg-3 pl-0 item_status_wrap">
                         <span class="badge float-right badge-pill badge-primary">In Progress</span>
                         <h4 class="time float-right mb-0">1d 5h</h4>
                       </div>
                     </div>
                     <div class="collapse" id="list-002-contents" role="tabpanel">
-                      <table class="table table-responsive-sm">
+                      <div class="msg_tbl_horizon">
+                        <span>
+                          This table is horizontally scrollable
+                          <i class="material-icons">swap_horizontal_circle</i>
+                        </span>
+                      </div>
+                      <table class="table table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
                         <thead>
                           <tr>
                             <th class="th_batchname">Batch Name</th>
@@ -401,22 +410,28 @@
                 <div id="list-003" data-children=".item">
                   <div class="item">
                     <div class="row list-title" data-toggle="collapse" data-parent="#list-003" href="#list-003-contents" aria-expanded="true" aria-controls="list-003-contents">
-                      <div class="col col-sm-6 col-md-3 item_meta_wrap">
+                      <div class="col col-sm-6 col-md-6 col-lg-3 item_meta_wrap">
                         <img class="img-avatar" src="img/avatars/no_avatar.png" alt="Profile Image" />
                         <h4 class="card-title mb-0">TJ123456</h4>
                       </div>
-                      <div class="col col-sm-none col-md-6 item_info_wrap">
+                      <div class="col col-md-12 col-lg-6 item_info_wrap">
                         <span>Ray Sumner</span>
                         <span>Translation + Edit</span>
                         <span>Spanish (Spain)</span>
                       </div>
-                      <div class="col col-sm-6 col-md-3 item_status_wrap">
+                      <div class="col col-sm-6 col-md-6 col-lg-3 pl-0 item_status_wrap">
                         <span class="badge float-right badge-pill badge-primary">In Progress</span>
                         <h4 class="time float-right mb-0">1d 5h</h4>
                       </div>
                     </div>
                     <div class="collapse" id="list-003-contents" role="tabpanel">
-                      <table class="table table-responsive-sm">
+                      <div class="msg_tbl_horizon">
+                        <span>
+                          This table is horizontally scrollable
+                          <i class="material-icons">swap_horizontal_circle</i>
+                        </span>
+                      </div>
+                      <table class="table table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
                         <thead>
                           <tr>
                             <th class="th_batchname">Batch Name</th>

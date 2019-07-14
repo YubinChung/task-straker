@@ -1,11 +1,11 @@
-/*  Custom style  20190711 Yubin Chung */
+/*  Custom style : 20190711 Yubin Chung */
 
-/* common */
+/* Common */
 body{background-color:var(--light);
   .material-icons {vertical-align: middle;}
   .app-body{
     .main {padding-bottom: 100px;}
-    .page-title {background-color: #fff;height: 45px;line-height: 45px; font-size: 20px;font-weight: bold;padding: 0 2rem;margin-bottom: 1rem;}
+    .page-title {background-color: #fff;height: 45px;line-height: 45px; font-size: 14px;font-weight: bold;padding: 0 2rem;margin-bottom: 1rem;color:var(--primary)}
     .form-control{border-color:var(--border);height: 45px;cursor: pointer;font-size:13px;
       &:focus{box-shadow:none;}
     }
@@ -15,27 +15,43 @@ body{background-color:var(--light);
   }
 }
 
-/* navbar */
+/* Nav */
 .navbar{border-color:var(--border);
   .navbar-brand{
     .navbar-brand-full{display:block;width:60%;margin:0 auto}
   }
-  .navbar-search {width:50%;max-width:50%;
+  .navbar-search {width:40%;max-width:40%;
     .btn {width: 35px;padding: 0;box-shadow:none;}
     #nav_search{box-shadow:none;border:none;}
   }
   .navbar-nav {
     .nav-item{min-width:40px;
-      .img-avatar{margin:0;}
       &.dropdown{position: relative;padding-left: 20px;margin: 0 30px 0 10px;
         &:before{content:"";display:block;position: absolute;width:1px;height:25px;top:5px;left:0;background-color:var(--border)}
-        .nav-link{color:var(--dark)}
+        .nav-link{color:var(--dark);position: relative;padding-right:40px;line-height:35px;
+          i{font-size: 16px;font-weight: bold;color: var(--gray);
+            &.drop_close{display: none;}
+          }
+          &[aria-expanded="true"] {
+            i.drop_close{display: inline-block;}
+            i.drop_open{display: none;}
+          }
+          .img-avatar{margin:0;position: absolute;top:0;right:0;}
+        }
+        .dropdown-menu{
+          .dropdown-item{font-size:13px;border-color:var(--border);
+            i{font-size:18px;color:#73818f}
+            &:active{background-color:var(--primary);font-weight:bold;
+              i{color:var(--white);}
+            }
+          }
+        }
       }
     }
   }
 }
 
-/* sidebar */
+/* Sidebar */
 .sidebar{background-color:var(--dark);
   .nav-item{line-height: 18px;
     &.open{
@@ -46,13 +62,13 @@ body{background-color:var(--light);
     .material-icons{font-size:18px;margin-right:5px;vertical-align: bottom;}
     .nav-link{padding:0.9rem 1rem}
   }
-  .nav-title{position: relative;
-    .btn{position: absolute;right: 1rem;padding: 0 7px;font-weight: bold; border: none;line-height: 22px;top: 9px;box-shadow:none;}
+  .nav-title{position: relative;position: relative;font-size: 13px;line-height: 22px;
+    .btn{position: absolute;right: 1rem;padding: 0 7px;font-weight: bold; border: none;line-height: 22px;top:12px;box-shadow:none;}
   }
 }
 
 /* Card */
-.card{
+.card{margin-bottom:1rem;
   &.job_list{
     .list-title {cursor: pointer;
       * {line-height:35px;}
@@ -62,12 +78,12 @@ body{background-color:var(--light);
         }
       }
       .item_info_wrap{ 
-        span{margin-left: 1rem;padding-left: 1rem;display: inline-block;
-          &:first-child {margin: 0;padding: 0;}
+        span{padding-left:5%;display: inline-block;font-size:13px;
+          &:first-child{padding-left:0;}
         }
       }
       .item_status_wrap{
-        .badge{padding: 0 1rem;font-size: 0.75rem;line-height: 25px!important;margin: 5px 0 0 1rem;}
+        .badge{padding: 0 1rem;font-size: 0.75rem;line-height: 25px!important;margin: 5px 0 0 12px;}
       }
     }
   }
@@ -78,23 +94,23 @@ body{background-color:var(--light);
         #job_search{border:none;}
       }
     }
+    .sorting_wrap{border-left:2px solid var(--border)}
   }
 }
 
 /* select2 */
 .select2-container{width:100%!important;
   .select2-dropdown{border-color:var(--border)}
-  .select2-selection{border:1px solid var(--border)!important;height: 45px!important;border-radius: 3px!important;
+  .select2-selection{border:1px solid var(--border)!important;min-height: 45px!important;border-radius: 3px!important;
     input.select2-search__field{line-height: 33px;padding-left: 10px;}
-    .select2-selection__choice{
-      &[title="In Progress"], &[title="Pending"], &[title="Complete"]{
-        .select2-selection__choice__remove{color:var(--white)}
-      }
-      &[title="In Progress"]{border-color:var(--primary)!important;background-color:var(--primary); color:var(--white)}
-      &[title="Pending"]{border-color:var(--warning)!important;background-color:var(--warning); }
-      &[title="Complete"]{border-color:var(--success)!important;background-color:var(--success); color:var(--white)}
+    .select2-selection__choice{background-color:#969696!important;color:#fff;font-weight:bold;direction: rtl;
+      &+.select2-search.select2-search--inline{display: none;}
+      &[title="In Progress"]{border-color:var(--primary)!important;background-color:var(--primary)!important; color:var(--white)}
+      &[title="Pending"]{border-color:var(--warning)!important;background-color:var(--warning)!important; }
+      &[title="Complete"]{border-color:var(--success)!important;background-color:var(--success)!important; color:var(--white)}
       span{line-height:25px;
-        &.select2-selection__choice__remove{margin-right:7px!important}
+        &>img{float:left;}
+        &.select2-selection__choice__remove{margin-left:7px!important;color:var(--white);font-size: 17px;}
       }
     }
   }
@@ -117,19 +133,21 @@ table{margin-top: 1rem;table-layout:fixed;
   th,td{border:none!important;text-align:center;vertical-align:middle!important;
     &.th_batchname{width:20%}
     &.table_progress {width:120px;vertical-align: middle;
-      .progress-bar{height:20px;} 
+      .progress{min-width:80px;}
+      .progress-bar{height: 16px; border-radius: 3px!important;
+        &.bg-info{background-color:var(--primary)!important}
+        &.bg-success{background-color:var(--success)!important}
+      } 
     }
     &.td_status {font-weight:bold;color:#fff;
       &.translating, &.editing{background-color:var(--primary)}
       &.translated, &.edited{background-color:var(--success)}
     }
-    
   }
   thead th{background-color:var(--light-gray);color:var(--dark);text-transform:uppercase;font-size:10px!important;padding:1rem 0.3rem!important;
     &.th_short{width:70px;}
     &.th_translator, &.th_editer{width:100px;}
     &.th_status{width:110px;}
-    
   }
   tbody td{font-size:13px;}
 }

@@ -1,18 +1,15 @@
 
 
 $(document).ready(function() {
-
   // load select2
-  $('.js-example-basic-multiple').select2({
+  $('.select2_custom').select2({
     placeholder: 'All',
   });
-  $('.js-example-basic-multiple.withPhoto').select2({
+  $('.select2_custom.withPhoto').select2({
     placeholder: 'All',
     templateResult: templateWithPhoto,
     templateSelection:templateWithPhoto
   });
-  
-  
 });
 
 let selectedID = '';

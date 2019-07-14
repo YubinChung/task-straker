@@ -17,11 +17,6 @@
   --border:#dcdcdc;
   --white: #fff;
   --font-family-sans-serif: "Open Sans", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
 }
 
 /*!
@@ -16419,8 +16414,8 @@ body {
   background-position: right calc(0.375em + 0.1875rem) center;
 }
 
-/*  Custom style  20190711 Yubin Chung */
-/* common */
+/*  Custom style : 20190711 Yubin Chung */
+/* Common */
 body {
   background-color: var(--light);
 }
@@ -16437,10 +16432,11 @@ body .app-body .page-title {
   background-color: #fff;
   height: 45px;
   line-height: 45px;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: bold;
   padding: 0 2rem;
   margin-bottom: 1rem;
+  color: var(--primary);
 }
 
 body .app-body .form-control {
@@ -16463,7 +16459,7 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
   box-shadow: none;
 }
 
-/* navbar */
+/* Nav */
 .navbar {
   border-color: var(--border);
 }
@@ -16475,8 +16471,8 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
 }
 
 .navbar .navbar-search {
-  width: 50%;
-  max-width: 50%;
+  width: 40%;
+  max-width: 40%;
 }
 
 .navbar .navbar-search .btn {
@@ -16492,10 +16488,6 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
 
 .navbar .navbar-nav .nav-item {
   min-width: 40px;
-}
-
-.navbar .navbar-nav .nav-item .img-avatar, .navbar .navbar-nav .nav-item .avatar > img {
-  margin: 0;
 }
 
 .navbar .navbar-nav .nav-item.dropdown {
@@ -16517,9 +16509,56 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
 
 .navbar .navbar-nav .nav-item.dropdown .nav-link {
   color: var(--dark);
+  position: relative;
+  padding-right: 40px;
+  line-height: 35px;
 }
 
-/* sidebar */
+.navbar .navbar-nav .nav-item.dropdown .nav-link i {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+.navbar .navbar-nav .nav-item.dropdown .nav-link i.drop_close {
+  display: none;
+}
+
+.navbar .navbar-nav .nav-item.dropdown .nav-link[aria-expanded="true"] i.drop_close {
+  display: inline-block;
+}
+
+.navbar .navbar-nav .nav-item.dropdown .nav-link[aria-expanded="true"] i.drop_open {
+  display: none;
+}
+
+.navbar .navbar-nav .nav-item.dropdown .nav-link .img-avatar, .navbar .navbar-nav .nav-item.dropdown .nav-link .avatar > img {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+  font-size: 13px;
+  border-color: var(--border);
+}
+
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item i {
+  font-size: 18px;
+  color: #73818f;
+}
+
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:active {
+  background-color: var(--primary);
+  font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:active i {
+  color: var(--white);
+}
+
+/* Sidebar */
 .sidebar {
   background-color: var(--dark);
 }
@@ -16549,6 +16588,9 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
 
 .sidebar .nav-title {
   position: relative;
+  position: relative;
+  font-size: 13px;
+  line-height: 22px;
 }
 
 .sidebar .nav-title .btn {
@@ -16558,11 +16600,15 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
   font-weight: bold;
   border: none;
   line-height: 22px;
-  top: 9px;
+  top: 12px;
   box-shadow: none;
 }
 
 /* Card */
+.card {
+  margin-bottom: 1rem;
+}
+
 .card.job_list .list-title {
   cursor: pointer;
 }
@@ -16584,21 +16630,20 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
 }
 
 .card.job_list .list-title .item_info_wrap span {
-  margin-left: 1rem;
-  padding-left: 1rem;
+  padding-left: 5%;
   display: inline-block;
+  font-size: 13px;
 }
 
 .card.job_list .list-title .item_info_wrap span:first-child {
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 
 .card.job_list .list-title .item_status_wrap .badge {
   padding: 0 1rem;
   font-size: 0.75rem;
   line-height: 25px !important;
-  margin: 5px 0 0 1rem;
+  margin: 5px 0 0 12px;
 }
 
 .card.job_search label {
@@ -16619,6 +16664,10 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
   border: none;
 }
 
+.card.job_search .sorting_wrap {
+  border-left: 2px solid var(--border);
+}
+
 /* select2 */
 .select2-container {
   width: 100% !important;
@@ -16630,7 +16679,7 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
 
 .select2-container .select2-selection {
   border: 1px solid var(--border) !important;
-  height: 45px !important;
+  min-height: 45px !important;
   border-radius: 3px !important;
 }
 
@@ -16639,24 +16688,31 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
   padding-left: 10px;
 }
 
-.select2-container .select2-selection .select2-selection__choice[title="In Progress"] .select2-selection__choice__remove, .select2-container .select2-selection .select2-selection__choice[title="Pending"] .select2-selection__choice__remove, .select2-container .select2-selection .select2-selection__choice[title="Complete"] .select2-selection__choice__remove {
-  color: var(--white);
+.select2-container .select2-selection .select2-selection__choice {
+  background-color: #969696 !important;
+  color: #fff;
+  font-weight: bold;
+  direction: rtl;
+}
+
+.select2-container .select2-selection .select2-selection__choice + .select2-search.select2-search--inline {
+  display: none;
 }
 
 .select2-container .select2-selection .select2-selection__choice[title="In Progress"] {
   border-color: var(--primary) !important;
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
   color: var(--white);
 }
 
 .select2-container .select2-selection .select2-selection__choice[title="Pending"] {
   border-color: var(--warning) !important;
-  background-color: var(--warning);
+  background-color: var(--warning) !important;
 }
 
 .select2-container .select2-selection .select2-selection__choice[title="Complete"] {
   border-color: var(--success) !important;
-  background-color: var(--success);
+  background-color: var(--success) !important;
   color: var(--white);
 }
 
@@ -16664,8 +16720,14 @@ body .app-body button.btn:focus, body .app-body button.btn.focus {
   line-height: 25px;
 }
 
+.select2-container .select2-selection .select2-selection__choice span > img {
+  float: left;
+}
+
 .select2-container .select2-selection .select2-selection__choice span.select2-selection__choice__remove {
-  margin-right: 7px !important;
+  margin-left: 7px !important;
+  color: var(--white);
+  font-size: 17px;
 }
 
 .select2-container .select2-results .select2-results__option {
@@ -16730,8 +16792,21 @@ table th.table_progress, table td.table_progress {
   vertical-align: middle;
 }
 
+table th.table_progress .progress, table td.table_progress .progress {
+  min-width: 80px;
+}
+
 table th.table_progress .progress-bar, table td.table_progress .progress-bar {
-  height: 20px;
+  height: 16px;
+  border-radius: 3px !important;
+}
+
+table th.table_progress .progress-bar.bg-info, table td.table_progress .progress-bar.bg-info {
+  background-color: var(--primary) !important;
+}
+
+table th.table_progress .progress-bar.bg-success, table td.table_progress .progress-bar.bg-success {
+  background-color: var(--success) !important;
 }
 
 table th.td_status, table td.td_status {
@@ -16773,20 +16848,118 @@ table tbody td {
 
 /* Mediaquery */
 @media screen and (min-width: 0) {
-  .col-sm-none {
+  .navbar-search {
     display: none;
+  }
+  .card.job_search .card-body .row .row > div.col-sm-4 {
+    margin-bottom: 10px;
+  }
+  .card.job_search .card-body .row .row .col-sm-4.pr-0 {
+    padding-right: 1rem !important;
+  }
+  .card.job_search .sorting_wrap {
+    border-width: 0;
+    margin-top: 10px;
+  }
+  .msg_tbl_horizon {
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: #73818f;
+    margin-bottom: -15px;
+    padding-top: 10px;
+  }
+  .msg_tbl_horizon i {
+    font-size: 16px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .col-sm-none {
-    display: block;
+@media screen and (max-width: 991px) {
+  html .main {
+    margin-left: 0 !important;
+  }
+  .sidebar-show .main::before,
+  .aside-menu-show .main::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1018;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-animation: opacity 0.25s;
+    animation: opacity 0.25s;
+  }
+  .navbar-toggler.sidebar-toggler {
+    padding-left: 2rem;
+    margin-right: 1rem;
+    outline: none;
+  }
+  .navbar .navbar-nav .nav-item.dropdown:before {
+    content: none;
+  }
+  .navbar .navbar-nav .nav-item.dropdown .nav-link {
+    padding-right: 0 !important;
+  }
+  .navbar .navbar-nav .nav-item.dropdown .nav-link span.user_name {
+    display: none;
+  }
+  .navbar .navbar-nav .nav-item.dropdown .nav-link i {
+    display: none !important;
+  }
+  .navbar .navbar-nav .nav-item.dropdown .nav-link img.img-avatar, .navbar .navbar-nav .nav-item.dropdown .nav-link .avatar > img {
+    position: static !important;
+  }
+  .card.job_list .list-title {
+    padding-bottom: 30px;
+    position: relative;
+  }
+  .card.job_list .item_info_wrap {
+    position: absolute;
+    bottom: -5px;
+    text-align: right;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .card.job_search .sorting_wrap {
+    border-width: 2px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 575px) and (max-width: 991px) {
+  .card.job_search .card-body .row .row .col-sm-4.pr-0:not(.search_status) {
+    padding-right: 0 !important;
   }
 }
 
 @media screen and (min-width: 992px) {
   .navbar .navbar-brand {
     width: 200px;
+  }
+  .navbar .navbar-search {
+    display: block;
+  }
+  .navbar .navbar-nav .nav-item.dropdown .nav-link span.user_name {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1091px) {
+  .msg_tbl_horizon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card.job_search .card-body .row .row .col-sm-4.pr-0 {
+    padding-right: 0 !important;
+  }
+  .card.job_search .card-body .row .row > div.col-sm-4 {
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
