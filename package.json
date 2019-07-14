@@ -29,7 +29,7 @@
     "serve": "npm-run-all --parallel localhost watch-css watch-js",
     "watch-css": "nodemon --ignore dist/ -e scss -x \"npm run css\"",
     "watch-js": "nodemon --watch src/js/src/ -x \"npm run js\"",
-    "deploy": "npm run build&&gh-pages -d build"
+    "deploy": "npm-run-all&&gh-pages -d build"
   },
   "dependencies": {
     "@coreui/coreui": "^2.1.12",

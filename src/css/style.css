@@ -16537,6 +16537,26 @@ body .app-body input::placeholder {
   border: none;
 }
 
+.navbar .navbar-search #nav_search::-webkit-input-placeholder {
+  color: #43425d;
+}
+
+.navbar .navbar-search #nav_search:-ms-input-placeholder {
+  color: #43425d;
+}
+
+.navbar .navbar-search #nav_search::-moz-placeholder {
+  color: #43425d;
+}
+
+.navbar .navbar-search #nav_search::-ms-input-placeholder {
+  color: #43425d;
+}
+
+.navbar .navbar-search #nav_search::placeholder {
+  color: #43425d;
+}
+
 .navbar .navbar-nav .nav-item {
   min-width: 40px;
 }
