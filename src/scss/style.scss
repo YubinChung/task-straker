@@ -1,8 +1,0 @@
-// Import Web Font
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-
-// Import styles
-@import "variables"; // variable overrides 
-@import "node_modules/@coreui/coreui/scss/coreui"; // core UI
-@import "custom"; // custom 
-@import "mediaquery" // media query
