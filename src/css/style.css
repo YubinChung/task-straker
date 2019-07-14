@@ -16976,6 +16976,9 @@ table tbody td.text-left {
 
 /* Mediaquery */
 @media screen and (min-width: 0) {
+  .main .container-fluid {
+    padding: 0 20px;
+  }
   .navbar-search {
     display: none;
   }
@@ -16999,6 +17002,33 @@ table tbody td.text-left {
   }
   .msg_tbl_horizon i {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card.job_list .list-title * {
+    line-height: 25px;
+  }
+  .card.job_list .list-title .item_meta_wrap .card-title {
+    font-size: 15px !important;
+    line-height: 25px !important;
+  }
+  .card.job_list .list-title .item_meta_wrap .img-avatar, .card.job_list .list-title .item_meta_wrap .avatar > img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  .card.job_list .list-title .item_info_wrap span {
+    padding-left: 10px;
+    font-size: 11px;
+  }
+  .card.job_list .list-title .item_status_wrap .badge {
+    font-size: 11px !important;
+    padding: 0 10px;
+    margin: 0 0 0 5px;
+  }
+  .card.job_list .list-title .item_status_wrap .time {
+    font-size: 15px;
   }
 }
 
@@ -17044,11 +17074,15 @@ table tbody td.text-left {
     padding-bottom: 30px;
     position: relative;
   }
-  .card.job_list .item_info_wrap {
+  .card.job_list .list-title .item_info_wrap {
     position: absolute;
     bottom: -5px;
     text-align: right;
     font-size: 12px;
+    line-height: 22px;
+  }
+  .card.job_list .list-title .item_info_wrap span {
+    line-height: 22px !important;
   }
 }
 
@@ -17066,6 +17100,9 @@ table tbody td.text-left {
 }
 
 @media screen and (min-width: 992px) {
+  .main .container-fluid {
+    padding: 0 30px;
+  }
   .navbar .navbar-brand {
     width: 200px;
   }
