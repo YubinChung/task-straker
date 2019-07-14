@@ -1,7 +1,7 @@
 # task-straker
 UI Exercise for Admin panel
 
-## 🏠 [Mock up page]([www..](https://yubinchung.github.io/task-straker/))
+👉 [Go to the page](https://yubinchung.github.io/task-straker/)
 
 ## Install
 
@@ -16,6 +16,6 @@ yarn run serve
 ```
 
 ## Author
-👤 ** Yu Bin Chung **
-* Github: [@YubinChung ](https://github.com/YubinChung)
-* LinkedIn: [@YuBin Chung ](https://www.linkedin.com/in/yubinchung/)
+👤 Yu Bin Chung
+* Github: [@YubinChung](https://github.com/YubinChung)
+* LinkedIn: [@YuBin Chung](https://www.linkedin.com/in/yubinchung/)
