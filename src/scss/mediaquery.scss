@@ -25,7 +25,9 @@
       .card-title{font-size:15px!important;line-height:25px!important}
       .img-avatar{width:25px;height:25px;margin-right:10px}
     }
-    .item_info_wrap span{padding-left:10px;font-size:11px}
+    .item_info_wrap {line-height:18px;
+      span{padding-left:10px;font-size:11px;line-height:18px;}
+    }
     .item_status_wrap {
       .badge{font-size:11px!important;padding:0 10px;margin:0 0 0 5px}
       .time{font-size:15px}
