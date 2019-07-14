@@ -67,4 +67,8 @@
     .col-sm-4.pr-0{padding-right:0!important;}
     &>div.col-sm-4 {margin-bottom:0;}
   }
+  .item_info_wrap {margin-left: -6%;margin-right: 6%}
+}
+@media screen and (min-width: 1350px){
+  .item_info_wrap {margin-left: -8%;margin-right: 8%}
 }
