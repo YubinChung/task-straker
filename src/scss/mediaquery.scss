@@ -18,7 +18,7 @@
 }
 
 @media screen and (max-width:991px){
-  html .main{margin-left:0!important}
+  html .main{margin-left:0!important;position: relative;}
   .sidebar-show .main::before, .aside-menu-show .main::before{position: absolute;top: 0;left: 0;z-index: 1018;width: 100%;height: 100%;content: "";background: rgba(0, 0, 0, 0.7);-webkit-animation: opacity 0.25s;animation: opacity 0.25s;}
   // navbar
   .navbar-toggler.sidebar-toggler {padding-left: 2rem;margin-right: 1rem;outline:none;}

@@ -16877,6 +16877,7 @@ table tbody td {
 @media screen and (max-width: 991px) {
   html .main {
     margin-left: 0 !important;
+    position: relative;
   }
   .sidebar-show .main::before,
   .aside-menu-show .main::before {

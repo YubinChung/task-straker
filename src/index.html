@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, sidebar-minimizer brand-minimizerinitial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-    <meta name="author" content="Łukasz Holeczek">
-    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, sidebar-minimizer=1.0,brand-minimizerinitial-scale=1.0">
+    <meta name="description" content="UI Exercise">
+    <meta name="author" content="Yubin Chung">
     <!-- Favicon -->
     <link rel="icon" type="image/ico" href="./img/favicon.png" sizes="any" />
     <!-- Icon -->
@@ -15,17 +14,32 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
     <link href="node_modules/select2/dist/css/select2.min.css" rel="stylesheet" >
+
+    <!-- javascript -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/pace-progress/pace.min.js"></script>
+    <script src="node_modules/select2/dist/js/select2.min.js"></script>
+    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+    
     <title>Straker JobPortal | Jobs</title>
   </head>
   <body class="app header-fixed sidebar-fixed sidebar-lg-show">
     <header class="app-header navbar">
+      <!-- mobile show sidebar btn -->
       <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- // mobile show sidebar btn -->
+
+      <!-- brand logo -->
       <a class="navbar-brand" href="javascript:void(0);">
         <img class="navbar-brand-full" src="img/brand/logo.png" alt="JobPortal">
-        <img class="navbar-brand-minimized" src="img/brand/signet.png" alt="JobPortal Signet image">
       </a>
+      <!-- // brand logo -->
+
       <!-- Search area -->
       <div class="nav navbar-search">
         <div class="input-group">
@@ -35,15 +49,17 @@
           <input class="form-control" id="nav_search" name="nav_search" size="16" type="text" placeholder="Search jobs, customers, groups or supergroups">
         </div>
       </div>
-      
+      <!-- // Search area -->
+
+      <!-- global nav -->
       <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item d-md-down-none">
+        <li class="nav-item d-sm-down-none">
           <a class="nav-link" href="javascript:void(0);"><i class="material-icons">apps</i></a>
         </li>
-        <li class="nav-item d-md-down-none">
+        <li class="nav-item d-sm-down-none">
           <a class="nav-link" href="javascript:void(0);"><i class="material-icons">insert_comment</i></a>
         </li>
-        <li class="nav-item d-md-down-none">
+        <li class="nav-item d-sm-down-none">
           <a class="nav-link" href="javascript:void(0);"><i class="material-icons">notifications</i></a>
         </li>
         <li class="nav-item dropdown">
@@ -60,8 +76,10 @@
           </div>
         </li>
       </ul>
+      <!-- // global nav -->
     </header>
     <div class="app-body">
+      <!-- sidebar -->
       <div class="sidebar">
         <nav class="sidebar-nav">
           <ul class="nav">
@@ -96,9 +114,15 @@
           </ul>
         </nav>
       </div>
+      <!-- // sidebar -->
+
+      <!-- main -->
       <main class="main">
         <!-- Page Title -->
         <div class="page-title">Jobs</div>
+        <!-- //Page Title -->
+
+        <!-- job filter -->
         <div class="container-fluid">
           <div class="animated fadeIn">
             <div class="card job_search">
@@ -106,6 +130,7 @@
                 <div class="row">
                   <div class="col-12 col-xl-6">
                     <div class="row">
+                      <!-- filter 1: project manager -->
                       <div class="col-sm-4 col-md-4 pr-0">
                         <label for="job_pm">Project Manager</label>
                         <div class="form-group mb-0">
@@ -117,6 +142,9 @@
                           </select>
                         </div>
                       </div>
+                      <!-- // filter 1: project manager -->
+
+                      <!-- filter 2: Account manager -->
                       <div class="col-sm-4 col-md-4 pr-0">
                         <label for="job_am">Account Manager</label>
                         <div class="form-group mb-0">
@@ -127,6 +155,9 @@
                           </select>
                         </div>
                       </div>
+                      <!-- // filter 2: Account manager -->
+
+                      <!-- filter 3: Status -->
                       <div class="col-sm-4 col-md-4 pr-0 search_status">
                         <label for="job_status">Status</label>
                         <div class="form-group mb-0">
@@ -138,10 +169,12 @@
                           </select>
                         </div>
                       </div>
+                      <!-- // filter 3: Status -->
                     </div>
                   </div>
                   <div class="col-12 col-xl-6">
                     <div class="row">
+                      <!-- filter 4: searching -->
                       <div class="col-sm-9 col-md-9 pr-0">
                         <label for="job_search_cat">More</label>
                         <div class="form-group mb-0">
@@ -160,6 +193,9 @@
                           </div>
                         </div>
                       </div>
+                      <!-- // filter 4: searching -->
+
+                      <!-- filter 5: sorting -->
                       <div class="col-sm-3 col-md-3 sorting_wrap">
                         <label for="job_sorting">Sort by</label>
                         <div class="form-group mb-0">
@@ -171,17 +207,20 @@
                           </select>
                         </div>
                       </div>
+                      <!-- // filter 5: sorting -->
                     </div>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
         </div>
+        <!-- // job filter -->
+
+        <!-- job list -->
         <div class="container-fluid">
           <div class="animated fadeIn">
-            <!-- card-->
+            <!-- card -->
             <div class="card job_list">
               <div class="card-body">
                 <div id="list-001" data-children=".item">
@@ -333,13 +372,12 @@
                       <button class="btn btn-square btn-block btn-link btn-sm" type="button">Show More</button>
                     </div>
                   </div>
-                  
                 </div>
-                
               </div>
             </div>
-            <!-- //card-->
-            <!-- card-->
+            <!-- // card -->
+
+            <!-- card -->
             <div class="card job_list">
               <div class="card-body">
                 <div id="list-002" data-children=".item">
@@ -403,8 +441,9 @@
                 </div>
               </div>
             </div>
-            <!-- //card-->
-            <!-- card-->
+            <!-- // card -->
+
+            <!-- card -->
             <div class="card job_list">
               <div class="card-body">
                 <div id="list-003" data-children=".item">
@@ -468,20 +507,15 @@
                 </div>
               </div>
             </div>
-            <!-- //card-->
+            <!-- // card -->
           </div>
         </div>
+        <!-- // job list -->
       </main>
+      <!-- // main -->
     </div>
     
-    <!-- CoreUI and necessary plugins-->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/pace-progress/pace.min.js"></script>
-    <script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-    <script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
-    <script src="node_modules/select2/dist/js/select2.min.js"></script>
+    
     <script src="js/app.js"></script>
   </body>
 </html>
