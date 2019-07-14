@@ -24,7 +24,7 @@ templateWithPhoto = (state) => {
   if (state.element != undefined){
     profile = state.element.attributes['data-id'].value;
   }
-  let baseUrl = "img/avatars";
+  let baseUrl = "src/img/avatars";
   let $state = $(
     `<span><img src="${baseUrl}/${profile == '' ? 'no_avatar' : profile}.png" class="img-profile" />${state.text}</span>`
   );
