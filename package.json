@@ -9,7 +9,6 @@
     "type": "git",
     "url": "git+https://github.com/YubinChung/task-straker.git"
   },
-  "main": "src/index.html",
   "scripts": {
     "build": "npm-run-all build-clean build-copy build-vendors",
     "build-clean": "rimraf dist",
