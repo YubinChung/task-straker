@@ -17019,12 +17019,12 @@ table tbody td.text-left {
     margin-right: 10px;
   }
   .card.job_list .list-title .item_info_wrap {
-    line-height: 18px;
+    line-height: 18px !important;
   }
   .card.job_list .list-title .item_info_wrap span {
     padding-left: 10px;
     font-size: 11px;
-    line-height: 18px;
+    line-height: 18px !important;
   }
   .card.job_list .list-title .item_status_wrap .badge {
     font-size: 11px !important;
