@@ -8,6 +8,11 @@ $(document).ready(function() {
     templateResult: templateWithPhoto,
     templateSelection:templateWithPhoto
   });
+
+  // selected select color change
+  $(".select_wrap select" ).change((e) => {
+    $(e.target).css('color','#43425d');
+  });
 });
 
 let selectedID = '';

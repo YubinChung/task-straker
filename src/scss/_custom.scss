@@ -7,6 +7,9 @@ body{background-color:var(--light);
     .main {padding-bottom: 100px;}
     .page-title {background-color: #fff;height: 45px;line-height: 45px; font-size: 14px;font-weight: bold;padding: 0 0 0 20px;margin-bottom: 1rem;color:#00adef}
     .form-control{appearance: none;border-color:var(--border);height: 38px;cursor: pointer;font-size:13px;border-radius:0!important;color:#d6d6d6;
+      option {color:#d6d6d6;
+        &.nms{color:#000;}
+      }
       &:focus{box-shadow:none;}
     }
     .select_wrap{position: relative;

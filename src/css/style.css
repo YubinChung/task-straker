@@ -16452,6 +16452,14 @@ body .app-body .form-control {
   color: #d6d6d6;
 }
 
+body .app-body .form-control option {
+  color: #d6d6d6;
+}
+
+body .app-body .form-control option.nms {
+  color: #000;
+}
+
 body .app-body .form-control:focus {
   box-shadow: none;
 }
