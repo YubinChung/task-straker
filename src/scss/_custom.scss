@@ -31,7 +31,11 @@ body{background-color:var(--light);
   }
   .navbar-search {width:40%;max-width:40%;
     .btn {width: 35px;padding: 0;box-shadow:none;}
-    #nav_search{box-shadow:none;border:none;}
+    #nav_search{box-shadow:none;border:none;
+      &::-webkit-input-placeholder{color:#43425d}
+      &:-ms-input-placeholder{color:#43425d}
+      &::placeholder{color:#43425d}
+    }
   }
   .navbar-nav {
     .nav-item{min-width:40px;
